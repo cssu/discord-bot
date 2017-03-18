@@ -4,18 +4,54 @@
   <meta charset="UTF-8">
   <title>Gather round children as a I tell you the tail of the CSSU</title>
   <style>
-    #lore {
-      font-size: 1em;
-      font-weight: 700;
-      color: yellow;
-    }
-    body {
-      background-color: black;
-    }
+body {
+    background-color: black;
+}
+#titles
+{
+	position: absolute;
+	width: 18em;
+	height: 50em;
+	bottom: 0;
+	left: 50%;
+	margin-left: -9em;
+	font-size: 350%;
+	font-weight: bold;
+	text-align: justify;
+	overflow: hidden;
+	transform-origin: 50% 100%;
+	transform: perspective(300px) rotateX(25deg);
+    color: yellow;
+}
+
+#titles:after
+{
+	position: absolute;
+	content: ' ';
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 60%;
+	background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+	pointer-events: none;
+}
+
+#titlecontent
+{
+	position: absolute;
+	top: 100%;
+	animation: scroll 100s linear 4s infinite;
+}
+
+@keyframes scroll {
+	0% { top: 100%; }
+	100% { top: -170%; }
+}
   </style>
 </head>
 <body>
-  <div id="lore">
+  <div id="titles"><div id="titlecontent">
+<p>
 ACT I
 
 SCENE I. Elsinore. A platform before the castle.
@@ -5606,6 +5642,7 @@ Take up the bodies: such a sight as this
 Becomes the field, but here shows much amiss.
 Go, bid the soldiers shoot.
 A dead march. Exeunt, bearing off the dead bodies; after which a peal of ordnance is shot off
-  </div>
+  </p>
+  </div></div>
 </body>
 </html>
