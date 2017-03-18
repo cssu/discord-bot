@@ -4,54 +4,47 @@
   <meta charset="UTF-8">
   <title>Gather round children as a I tell you the tale of the CSSU</title>
   <style>
-body {
-    background-color: black;
-}
-#titles
-{
-	position: absolute;
-	width: 18em;
-	height: 50em;
-	bottom: 0;
-	left: 50%;
-	margin-left: -9em;
-	font-size: 350%;
-	font-weight: bold;
-	text-align: justify;
-	overflow: hidden;
-	transform-origin: 50% 100%;
-	transform: perspective(300px) rotateX(25deg);
-    color: yellow;
-}
-
-#titles:after
-{
-	position: absolute;
-	content: ' ';
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 60%;
-	background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-	pointer-events: none;
-}
-
-#titlecontent
-{
-	position: absolute;
-	top: 100%;
-	animation: scroll 100s linear 4s infinite;
-}
-
-@keyframes scroll {
-	0% { top: 100%; }
-	100% { top: -170%; }
-}
+    body {
+      background-color: #171826;
+      color: #ffd600;
+    }
+    #titles {
+      bottom: 0;
+      font-size: 350%;
+      font-weight: bold;
+      height: 50em;
+      left: 50%;
+      margin-left: -9em;
+      overflow: hidden;
+      position: absolute;
+      text-align: justify;
+      transform-origin: 50% 100%;
+      transform: perspective(300px) rotateX(25deg);
+      width: 18em;
+    }
+    #titles::after {
+      background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+      bottom: 60%;
+      content: '';
+      left: 0;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    #titlecontent {
+      animation: scroll 5s linear 1s infinite;
+      position: absolute;
+      top: 100%;
+    }
+    @keyframes scroll {
+      0% { top: 100%; }
+      100% { top: -500%; }
+    }
   </style>
 </head>
 <body>
-  <div id="titles"><div id="titlecontent">
-<p>
+  <pre id="titles"><div id="titlecontent">
 ACT I
 
 SCENE I. Elsinore. A platform before the castle.
@@ -1147,9 +1140,9 @@ I have sworn 't.
 MARCELLUS HORATIO
 [Within] My lord, my lord,--
 MARCELLUS
-[Within]	Lord Hamlet,--
+[Within]  Lord Hamlet,--
 HORATIO
-[Within]	Heaven secure him!
+[Within]  Heaven secure him!
 HAMLET
 So be it!
 HORATIO
@@ -5642,7 +5635,6 @@ Take up the bodies: such a sight as this
 Becomes the field, but here shows much amiss.
 Go, bid the soldiers shoot.
 A dead march. Exeunt, bearing off the dead bodies; after which a peal of ordnance is shot off
-  </p>
-  </div></div>
+  </div></pre>
 </body>
 </html>
